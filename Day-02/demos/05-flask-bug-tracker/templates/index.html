@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bug Tracker</title>
+	<style>
+		.closed{
+			color : red;
+			text-decoration: line-through;
+			font-style: italic;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>Bug Tracker</h1>
+	<a href="/new">Create New</a>
+	<hr>
+	<ol>
+		{% for bug in bugs %}
+			<li>
+			{% if bug['is_closed'] %}
+				<span class='closed'>{{bug['name']}}</span>
+			{% else %}
+				<span>{{bug['name']}}</span>
+			{% endif %}
+			<span><a href="/toggle/{{bug['id']}}">X</a></span>
+			</li>
+		{% endfor %}
+	</ol>
+	<form action="/removeclosed" method="post"><input type="submit" value="Remove Closed"></form>
+</body>
+</html>
