@@ -21,6 +21,7 @@ while True:
         data = tcpCliSock.recv(BUFSIZ)
         if not data:
             break
+        print data
         tcpCliSock.send('[%s] %s' % (ctime(), data))
 
     print("client connection closed")
