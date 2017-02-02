@@ -7,15 +7,17 @@ from time import ctime
 from urllib2 import urlopen as uopen
 
 REGEX = compile('#([\d,]+) in Books ')
-AMZN = 'http://amazon.com/dp/'
+AMZN = 'https://www.amazon.com/dp/'
 ISBNs = {
-    '0132269837': 'Node.js Jump start',
-    '0132356139': 'Python Web Development with Django',
+    '1539406660': 'Node.js Jump start',
+    '1617290572': 'Node.js in action',
     '0137143419': 'Python Fundamentals',
 }
 
 def getRanking(isbn):
-    page = uopen('%s%s' % (AMZN, isbn)) # '{0}{1}'.format(AMZN, isbn)) for 2.6+
+    url = '{0}{1}'.format(AMZN, isbn)
+    print url
+    page = uopen('{0}{1}'.format(AMZN, isbn)) # '{0}{1}'.format(AMZN, isbn)) for 2.6+
     data = page.read()
     page.close()
     return REGEX.findall(data)[0]

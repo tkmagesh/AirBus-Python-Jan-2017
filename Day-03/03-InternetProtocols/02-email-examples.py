@@ -35,14 +35,14 @@ def sendMsg(fr, to, msg):
 if __name__ == '__main__':
     print 'sending multipart alternative msg'
     msg = make_mpa_msg()
-    msg['From'] = SENDER
-    msg['To'] = ', '.join(RECIPS)
+    msg['From'] = 'tkmagesh77@gmail.com'
+    msg['To'] = 'tkmagesh77@gmail.com'
     msg['Subject'] = 'multipart alternative test'
-    sendMsg(SENDER, RECIPS, msg.as_string())
+    sendMsg('tkmagesh77@gmail.com', 'tkmagesh77@gmail.com', msg.as_string())
 
     print 'sending image msg'
     msg = make_img_msg(SOME_IMG_FILE)
-    msg['From'] = SENDER
-    msg['To'] = ', '.join(RECIPS)
+    msg['From'] = 'tkmagesh77@gmail.com'
+    msg['To'] = 'tkmagesh77@gmail.com'
     msg['Subject'] = 'image file test'
-    sendMsg(SENDER, RECIPS, msg.as_string())
+    sendMsg('tkmagesh77@gmail.com', 'tkmagesh77@gmail.com', msg.as_string())

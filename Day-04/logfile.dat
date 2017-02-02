@@ -1,0 +1,9 @@
+Jan 26, 2015 11:25:25	DEBUG	This is a debugging message.
+Jan 26, 2015 11:25:36	INFO	This is a information message.
+Jan 26, 2015 11:25:46	WARNING	This is a warning message.
+Jan 26, 2015 11:25:52	WARNING	This is a another warning message.
+Jan 26, 2015 11:25:59	INFO	This is a another information message.
+Jan 26, 2015 11:26:13	DEBUG	This is a another debugging message.
+Jan 26, 2015 11:26:32	INFO	This is a message.
+Jan 26, 2015 11:26:40	WARNING	This is a another warning message.
+Jan 26, 2015 11:26:54	WARNING	This is a another warning message.
